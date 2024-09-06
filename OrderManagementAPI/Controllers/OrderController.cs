@@ -47,6 +47,7 @@ namespace OrderManagementAPI.Controllers
             }
 
             order.OrderNumber = OrderNumberGenerator.GenerateOrderNumber(order.PickupDate);
+            order.PickupDate = DateTime.SpecifyKind(order.PickupDate, DateTimeKind.Utc);
 
             await _orderRepository.AddAsync(order);
 
