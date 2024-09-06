@@ -1,28 +1,34 @@
 # OrderManagementAPI
 
-##База данных
+## База данных
 
 В PostgreSQL необходимо восстановить бд и выбрать файл для восстановления BD.backup
 
-##WebAPI
+## WebAPI
 
-##Клонируйте репозиторий:
+### Клонируйте репозиторий:
 git clone <URL репозитория>
 
 cd OrderManagementAPI
-###Настройка конфигурации:
+
+### Настройка конфигурации:
 
 В appsettings.json необходимо прописать connection string - "DefaultConnection": "Host=localhost;Port=5432; Database=OrderManagement; User ID=postgres;Password=123456"
 
-###Запуск приложения:
+### Запуск приложения:
 dotnet restore
+
 dotnet run
+
 Будет запущена на http://localhost:5072
 
-##React app
+## React app
 
-###Запуск приложения:
+### Запуск приложения:
 Перейдите в корневую папку проекта(order-management) и выполните команду:
+
 npm install
+
 npm start
+
 Приложение будет доступно по адресу http://localhost:3000
