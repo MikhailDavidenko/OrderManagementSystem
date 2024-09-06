@@ -13,9 +13,9 @@ namespace OrderManagementAPI.Repositories
             _context = context;
         }
 
-        public async Task<Order> GetByIdAsync(int orderId)
+        public async Task<Order> GetByNumberAsync(string orderNumber)
         {
-            return await _context.Orders.FindAsync(orderId);
+            return await _context.Orders.FirstOrDefaultAsync(p=>p.OrderNumber == orderNumber);
         }
 
         public async Task<IEnumerable<Order>> GetAllAsync()
